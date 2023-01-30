@@ -1,0 +1,20 @@
+name: deploy
+
+# The verifier builds material-addons and then builds the Demo
+
+on: workflow_call
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm run build:mat-add
+      - run: npm install --no-optional
+      - run: npm run build:demo
