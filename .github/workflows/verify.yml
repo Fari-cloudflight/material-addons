@@ -3,6 +3,7 @@ name: Verify
 # The verifier builds material-addons and then builds the Demo
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
   pull_request:
