@@ -22,7 +22,8 @@
     "build-and-serve": "npm install && npm run build:mat-add && npm install --no-optional && npm install && ng serve --open",
     "serve": "ng serve",
     "postinstall": "ngcc",
-    "prepare": "npm run build:mat-add"
+    "prepare": "npm run build:mat-add",
+    "prepublish ": "npm run build:mat-add"
   },
   "private": true,
   "dependencies": {
